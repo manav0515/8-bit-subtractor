@@ -79,3 +79,4 @@ read_sdc "./../CONSTRAINTS/8_bit_sub.sdc"
 # Read parasitic data from ICC2
 read_parasitics "./../ICCII/results/8_sub_func::nom.spef.p2_125.spef"
 ```
+
