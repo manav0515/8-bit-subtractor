@@ -1,0 +1,1209 @@
+dc shell: -
+
+timing: -
+
+Operating Conditions: ss0p7vn40c   Library: saed32rvt_ss0p7vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: regA_reg[0]
+              (rising edge-triggered flip-flop clocked by Clock)
+  Endpoint: DIFF_reg[7]
+            (rising edge-triggered flip-flop clocked by Clock)
+  Path Group: Clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  subtractor_8bit    8000                  saed32rvt_ss0p7vn40c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clock (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  regA_reg[0]/CLK (DFFX1_RVT)              0.00       0.00 r
+  regA_reg[0]/Q (DFFX1_RVT)                0.60       0.60 f
+  U17/Y (OR2X1_RVT)                        0.36       0.96 f
+  U23/Y (NAND2X0_RVT)                      0.20       1.16 r
+  U14/Y (NAND2X1_RVT)                      0.40       1.56 f
+  U31/Y (AND2X1_RVT)                       0.25       1.81 f
+  U34/Y (OR2X1_RVT)                        0.40       2.21 f
+  U5/Y (INVX0_RVT)                         0.15       2.37 r
+  U49/Y (OR2X1_RVT)                        0.19       2.56 r
+  U11/Y (NAND2X1_RVT)                      0.35       2.90 f
+  U70/CO (FADDX1_RVT)                      0.52       3.43 f
+  U69/S (FADDX1_RVT)                       0.76       4.19 f
+  DIFF_reg[7]/D (DFFX1_RVT)                0.00       4.19 f
+  data arrival time                                   4.19
+
+  clock Clock (rise edge)                  6.80       6.80
+  clock network delay (ideal)              0.00       6.80
+  clock uncertainty                       -1.60       5.20
+  DIFF_reg[7]/CLK (DFFX1_RVT)              0.00       5.20 r
+  library setup time                      -0.61       4.59
+  data required time                                  4.59
+  -----------------------------------------------------------
+  data required time                                  4.59
+  data arrival time                                  -4.19
+  -----------------------------------------------------------
+  slack (MET)                                         0.40
+
+
+power: -
+
+Operating Conditions: ss0p7vn40c   Library: saed32rvt_ss0p7vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+subtractor_8bit        8000              saed32rvt_ss0p7vn40c
+
+
+Global Operating Voltage = 0.7  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  12.3041 uW   (97%)
+  Net Switching Power  = 370.1587 nW    (3%)
+                         ---------
+Total Dynamic Power    =  12.6742 uW  (100%)
+
+Cell Leakage Power     =   2.4190 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+  (   0.00%)
+  (   0.00%)
+  (   0.00%)
+  (  79.70%)  i
+ (  13.93%)
+  (   0.00%)
+  (   6.37%)
+--------------------------------------------------------------------------------------------------
+Total             12.3041 uW         0.3702 uW     2.4190e+06 pW        15.0932 uW
+
+qor: -
+
+  Timing Path Group 'Clock'
+  -----------------------------------
+  Levels of Logic:              10.00
+  Critical Path Length:          4.19
+  Critical Path Slack:           0.40
+  Critical Path Clk Period:      6.80
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:                 92
+  Buf/Inv Cell Count:              10
+  Buf Cell Count:                   0
+  Inv Cell Count:                  10
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:        66
+  Sequential Cell Count:           26
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      125.292992
+  Noncombinational Area:   172.309638
+  Buf/Inv Area:             12.707200
+  Total Buffer Area:             0.00
+  Total Inverter Area:          12.71
+  Macro/Black Box Area:      0.000000
+  Net Area:                 38.954851
+  -----------------------------------
+  Cell Area:               297.602629
+  Design Area:             336.557481
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           114
+  Nets With Violations:            32
+  Max Trans Violations:            32
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: ict-chipin.sot.pdpu.ac.in
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.01
+  Logic Optimization:                  0.24
+  Mapping Optimization:                0.24
+  -----------------------------------------
+  Overall Compile Time:                3.06
+  Overall Compile Wall Clock Time:     3.26
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+units: -
+
+Units
+------------------------------------
+Time_unit            : 1.0e-09 Second(ns)
+Capacitive_load_unit : 1.0e-15 Farad(fF)
+Resistance_unit      : 1.0e+6 Ohm(MOhm)
+Voltage_unit         : 1 Volt
+Power_unit           : N/A
+Current_unit         : 1.0e-06 Amp(uA)
+
+
+
+
+
+floor planning
+
+power: -
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+Mode: default
+Corner: default
+Scenario: default
+Voltage: 0.85
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = -1.31e+07 pW (105.4%)
+  Net Switching Power    = 6.67e+05 pW ( -5.4%)
+Total Dynamic Power      = -1.25e+07 pW (100.0%)
+
+Cell Leakage Power       = 7.00e+08 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+register                  0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+sequential               -1.40e+07               1.69e+05               5.29e+08               5.15e+08    ( 74.8%)         
+combinational             9.21e+05               4.99e+05               1.72e+08               1.73e+08    ( 25.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                    -1.31e+07 pW            6.67e+05 pW            7.00e+08 pW            6.88e+08 pW
+
+
+qor: -
+
+
+****************************************
+
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                     92
+Buf/Inv Cell Count:                  10
+Buf Cell Count:                       0
+Inv Cell Count:                      10
+Combinational Cell Count:            66
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:               26
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       26
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:              125.29
+Noncombinational Area:           172.31
+Buf/Inv Area:                     12.71
+Total Buffer Area:                 0.00
+Total Inverter Area:              12.71
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                     499.55
+Net YLength:                     456.47
+----------------------------------------
+Cell Area (netlist):                            297.60
+Cell Area (netlist and physical only):          297.60
+Net Length:                      956.03
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               119
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+units: -
+
+
+
+Input Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+Output Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+
+powerplanning
+
+qor:-
+
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                     92
+Buf/Inv Cell Count:                  10
+Buf Cell Count:                       0
+Inv Cell Count:                      10
+Combinational Cell Count:            66
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:               26
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       26
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:              125.29
+Noncombinational Area:           172.31
+Buf/Inv Area:                     12.71
+Total Buffer Area:                 0.00
+Total Inverter Area:              12.71
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                     499.55
+Net YLength:                     456.47
+----------------------------------------
+Cell Area (netlist):                            297.60
+Cell Area (netlist and physical only):          297.60
+Net Length:                      956.03
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               119
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+power: -
+
+
+
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: default
+Corner: default
+Scenario: default
+Voltage: 0.85
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = -1.31e+07 pW (105.4%)
+  Net Switching Power    = 6.67e+05 pW ( -5.4%)
+Total Dynamic Power      = -1.25e+07 pW (100.0%)
+
+Cell Leakage Power       = 7.00e+08 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+register                  0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+sequential               -1.40e+07               1.69e+05               5.29e+08               5.15e+08    ( 74.8%)         
+combinational             9.21e+05               4.99e+05               1.72e+08               1.73e+08    ( 25.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                    -1.31e+07 pW            6.67e+05 pW            7.00e+08 pW            6.88e+08 pW
+
+units: -
+
+Report : user_units
+Design : subtractor_8bit
+Version: W-2024.09
+Date   : Tue Jun  3 10:38:40 2025
+****************************************
+
+Input Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+Output Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+placement: -
+
+timing: -
+
+
+****************************************
+
+  Startpoint: B[7] (input port clocked by Clock)
+  Endpoint: regB_reg[7] (rising edge-triggered flip-flop clocked by Clock)
+  Mode: func
+  Corner: nom
+  Scenario: func::nom
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock Clock (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             1.50      1.50 f
+  B[7] (in)                                        0.00      1.50 f
+  regB_reg[7]/SETB (DFFSSRX1_RVT)                  0.00      1.50 f
+  data arrival time                                          1.50
+
+  clock Clock (rise edge)                          6.80      6.80
+  clock network delay (ideal)                      0.00      6.80
+  regB_reg[7]/CLK (DFFSSRX1_RVT)                   0.00      6.80 r
+  clock uncertainty                               -1.60      5.20
+  library setup time                              -0.17      5.03
+  data required time                                         5.03
+  ------------------------------------------------------------------------
+  data required time                                         5.03
+  data arrival time                                         -1.50
+  ------------------------------------------------------------------------
+  slack (MET)                                                3.53
+
+qor: -
+
+
+
+
+Scenario           'func::nom'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              1.50
+Critical Path Slack:               3.53
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func::nom'
+Timing Path Group  '**reg2out_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.08
+Critical Path Slack:               4.32
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func::nom'
+Timing Path Group  'Clock'
+----------------------------------------
+Levels of Logic:                      9
+Critical Path Length:              0.50
+Critical Path Slack:               4.67
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                     85
+Buf/Inv Cell Count:                   8
+Buf Cell Count:                       0
+Inv Cell Count:                       8
+Combinational Cell Count:            59
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:               26
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       26
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:              109.54
+Noncombinational Area:           172.31
+Buf/Inv Area:                     10.17
+Total Buffer Area:                 0.00
+Total Inverter Area:              10.17
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                     366.14
+Net YLength:                     417.77
+----------------------------------------
+Cell Area (netlist):                            281.85
+Cell Area (netlist and physical only):          281.85
+Net Length:                      783.91
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               107
+Nets with Violations:                17
+Max Trans Violations:                17
+Max Cap Violations:                   0
+
+
+power: -
+
+
+
+Information: Activity propagation will be performed for scenario func::nom.
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: func
+Corner: nom
+Scenario: func::nom
+Voltage: 0.85
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = 4.95e+05 pW ( 33.2%)
+  Net Switching Power    = 9.95e+05 pW ( 66.8%)
+Total Dynamic Power      = 1.49e+06 pW (100.0%)
+
+Cell Leakage Power       = 6.49e+08 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             1.53e+07               0.00e+00               0.00e+00               1.53e+07    (  2.3%)        i
+register                 -1.54e+07               2.64e+05               5.24e+08               5.09e+08    ( 78.2%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             6.16e+05               7.31e+05               1.25e+08               1.26e+08    ( 19.4%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     4.95e+05 pW            9.95e+05 pW            6.49e+08 pW            6.51e+08 pW
+
+units: -
+
+Report : user_units
+Design : subtractor_8bit
+Version: W-2024.09
+Date   : Tue Jun  3 10:47:55 2025
+****************************************
+
+Input Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+Output Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+clock: -
+
+timing:-
+
+
+****************************************
+
+  Startpoint: B[7] (input port clocked by Clock)
+  Endpoint: regB_reg[7] (rising edge-triggered flip-flop clocked by Clock)
+  Mode: func
+  Corner: nom
+  Scenario: func::nom
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock Clock (rise edge)                          0.00      0.00
+  clock network delay (propagated)                 0.04      0.04
+  input external delay                             1.50      1.54 f
+  B[7] (in)                                        0.00      1.54 f
+  regB_reg[7]/SETB (DFFSSRX1_RVT)                  0.00      1.54 f
+  data arrival time                                          1.54
+
+  clock Clock (rise edge)                          6.80      6.80
+  clock network delay (propagated)                 0.06      6.86
+  regB_reg[7]/CLK (DFFSSRX1_RVT)                   0.00      6.86 r
+  clock uncertainty                               -1.60      5.26
+  library setup time                              -0.19      5.07
+  data required time                                         5.07
+  ------------------------------------------------------------------------
+  data required time                                         5.07
+  data arrival time                                         -1.54
+  ------------------------------------------------------------------------
+  slack (MET)                                                3.53
+
+qor: -
+
+****************************************
+
+
+Scenario           'func::nom'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              1.50
+Critical Path Slack:               3.53
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func::nom'
+Timing Path Group  '**reg2out_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.09
+Critical Path Slack:               4.29
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func::nom'
+Timing Path Group  'Clock'
+----------------------------------------
+Levels of Logic:                     10
+Critical Path Length:              0.52
+Critical Path Slack:               4.65
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                    111
+Buf/Inv Cell Count:                  28
+Buf Cell Count:                       2
+Inv Cell Count:                      26
+Combinational Cell Count:            85
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:               26
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       26
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:              137.24
+Noncombinational Area:           172.31
+Buf/Inv Area:                     41.17
+Total Buffer Area:                 8.13
+Total Inverter Area:              33.04
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                     421.77
+Net YLength:                     478.69
+----------------------------------------
+Cell Area (netlist):                            309.55
+Cell Area (netlist and physical only):          309.55
+Net Length:                      900.46
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               133
+Nets with Violations:                18
+Max Trans Violations:                18
+Max Cap Violations:                   0
+----------------------------------------
+
+power: -
+
+****************************************
+Information: Activity propagation will be performed for scenario func::nom.
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: func
+Corner: nom
+Scenario: func::nom
+Voltage: 0.85
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = 7.88e+06 pW ( 65.5%)
+  Net Switching Power    = 4.15e+06 pW ( 34.5%)
+Total Dynamic Power      = 1.20e+07 pW (100.0%)
+
+Cell Leakage Power       = 6.99e+08 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             2.36e+07               3.07e+06               7.26e+07               9.92e+07    ( 14.0%)        i
+register                 -1.62e+07               2.65e+05               5.24e+08               5.08e+08    ( 71.5%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             5.53e+05               8.09e+05               1.02e+08               1.03e+08    ( 14.5%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     7.88e+06 pW            4.15e+06 pW            6.99e+08 pW            7.11e+08 pW
+
+units: -
+
+****************************************
+
+Input Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+Output Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+route: -
+
+timing: -
+
+****************************************
+
+  Startpoint: B[7] (input port clocked by Clock)
+  Endpoint: regB_reg[7] (rising edge-triggered flip-flop clocked by Clock)
+  Mode: func
+  Corner: nom
+  Scenario: func::nom
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock Clock (rise edge)                          0.00      0.00
+  clock network delay (propagated)                 0.04      0.04
+  input external delay                             1.50      1.54 f
+  B[7] (in)                                        0.00      1.54 f
+  regB_reg[7]/SETB (DFFSSRX1_RVT)                  0.00      1.54 f
+  data arrival time                                          1.54
+
+  clock Clock (rise edge)                          6.80      6.80
+  clock network delay (propagated)                 0.06      6.86
+  regB_reg[7]/CLK (DFFSSRX1_RVT)                   0.00      6.86 r
+  clock uncertainty                               -1.60      5.26
+  library setup time                              -0.19      5.07
+  data required time                                         5.07
+  ------------------------------------------------------------------------
+  data required time                                         5.07
+  data arrival time                                         -1.54
+  ------------------------------------------------------------------------
+  slack (MET)                                                3.53
+
+qor: -
+
+Scenario           'func::nom'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              1.50
+Critical Path Slack:               3.53
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func::nom'
+Timing Path Group  '**reg2out_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.09
+Critical Path Slack:               4.29
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func::nom'
+Timing Path Group  'Clock'
+----------------------------------------
+Levels of Logic:                     10
+Critical Path Length:              0.52
+Critical Path Slack:               4.65
+Critical Path Clk Period:          6.80
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                    111
+Buf/Inv Cell Count:                  28
+Buf Cell Count:                       2
+Inv Cell Count:                      26
+Combinational Cell Count:            85
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:               26
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       26
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:              137.24
+Noncombinational Area:           172.31
+Buf/Inv Area:                     41.17
+Total Buffer Area:                 8.13
+Total Inverter Area:              33.04
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                     428.34
+Net YLength:                     489.90
+----------------------------------------
+Cell Area (netlist):                            309.55
+Cell Area (netlist and physical only):          309.55
+Net Length:                      918.24
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:               133
+Nets with Violations:                18
+Max Trans Violations:                18
+Max Cap Violations:                   0
+----------------------------------------
+
+power: -
+
+Mode: func
+Corner: nom
+Scenario: func::nom
+Voltage: 0.85
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = 7.86e+06 pW ( 65.5%)
+  Net Switching Power    = 4.14e+06 pW ( 34.5%)
+Total Dynamic Power      = 1.20e+07 pW (100.0%)
+
+Cell Leakage Power       = 6.98e+08 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             2.36e+07               3.07e+06               7.26e+07               9.92e+07    ( 14.0%)        i
+register                 -1.63e+07               2.66e+05               5.24e+08               5.08e+08    ( 71.6%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             5.51e+05               8.11e+05               1.01e+08               1.03e+08    ( 14.5%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     7.86e+06 pW            4.14e+06 pW            6.98e+08 pW            7.10e+08 pW
+
+units: -
+
+Input Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+Output Units (set by technology library)
+----------------------------------------------
+time                         : 1.00ns
+resistance                   : 1.00MOhm
+capacitance                  : 1.00fF
+voltage                      : 1.00V
+current                      : 1.00uA
+power                        : 1.00pW
+length                       : 1.00um
+energy                       : 1.00pj/t
+
+
+pt shell: -
+
+timing: -
+
+  Startpoint: regA_reg[0]
+               (rising edge-triggered flip-flop clocked by Clock)
+  Endpoint: DIFF_reg[7]
+               (rising edge-triggered flip-flop clocked by Clock)
+  Path Group: Clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock Clock (rise edge)                             0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  regA_reg[0]/CLK (DFFX1_RVT)                         0.000000   0.000000 r
+  regA_reg[0]/Q (DFFX1_RVT)                           0.737184 & 0.737184 r
+  ctmTdsLR_3_559/Y (INVX0_RVT)                        0.122952 & 0.860136 f
+  ctmTdsLR_1_557/Y (NAND2X0_RVT)                      0.245739 & 1.105875 r
+  U23/Y (NAND2X0_RVT)                                 0.260965 & 1.366840 f
+  U14/Y (NAND2X0_RVT)                                 0.353463 & 1.720303 r
+  ctmTdsLR_1_5/Y (NAND3X0_RVT)                        0.313076 & 2.033379 f
+  ctmTdsLR_2_6/Y (NAND3X0_RVT)                        0.457104 & 2.490483 r
+  ctmTdsLR_1_7/Y (NAND3X0_RVT)                        0.300814 & 2.791496 f
+  ctmTdsLR_1_9/Y (NAND3X0_RVT)                        0.392899 & 3.184195 r
+  U70/CO (FADDX1_RVT)                                 0.577901 & 3.762096 r
+  U69/S (FADDX1_RVT)                                  0.769283 & 4.531379 f
+  DIFF_reg[7]/D (DFFX1_RVT)                           0.000003 & 4.531382 f
+  data arrival time                                              4.531382
+
+  clock Clock (rise edge)                             6.800000   6.800000
+  clock network delay (ideal)                         0.000000   6.800000
+  DIFF_reg[7]/CLK (DFFX1_RVT)                                    6.800000 r
+  clock reconvergence pessimism                       0.000000   6.800000
+  clock uncertainty                                   -1.600000  5.200000
+  library setup time                                  -0.614627  4.585373
+  data required time                                             4.585373
+  ------------------------------------------------------------------------------
+  data required time                                             4.585373
+  data arrival time                                              -4.531382
+  ------------------------------------------------------------------------------
+  slack (MET)                                                    0.053991
+
+qor: -
+
+  Timing Path Group 'Clock' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11
+  Critical Path Length:                4.567899
+  Critical Path Slack:                 0.017722
+  Total Negative Slack:                0.000000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'Clock' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2
+  Critical Path Length:                0.975065
+  Critical Path Slack:                 0.947920
+  Total Negative Slack:                0.000000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:              42.758636
+  Total cell area:                   309.547363
+  Design Area:                       352.306000
+  ---------------------------------------------
+
+
+  Cell & Pin Count
+  ---------------------------------------------
+  Pin Count:                                342
+  Hierarchical Cell Count:                    0
+  Hierarchical Port Count:                    0
+  Leaf Cell Count:                          111
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:              342
+  sequential_clock_pulse_width Count:        26
+  max_transition Count:                     156
+  sequential_clock_pulse_width Cost:  35.990440
+  max_transition Cost:                21.139278
+  Total DRC Cost:                     57.129719
+  ---------------------------------------------
+
+units: -
+
+Units
+---------------------------------------------
+Capacitive_load_unit        : 1e-15 Farad
+Current_unit                : 1e-06 Amp
+Resistance_unit             : 1e+06 Ohm
+Time_unit                   : 1e-09 Second
+Voltage_unit                : 1 Volt
+
+
+
